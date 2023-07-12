@@ -126,6 +126,10 @@ struct ShopView: View {
                         
                         Button {
                             //checkout
+                            Task{
+                                await system.user!.clearCart()
+                                showCart = false
+                            }
                         } label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 15)

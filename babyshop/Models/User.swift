@@ -27,6 +27,7 @@ class User: ObservableObject{
         self.orders = orders
     }
     
+    
     func getItemsAmountInCart() -> Int{
         
         var sum: Int = 0
@@ -46,6 +47,13 @@ class User: ObservableObject{
         }
         
         return sum
+    }
+    
+    @MainActor
+    func clearCart() async -> Bool{
+        
+        self.cart = []
+        return true
     }
     
     @MainActor

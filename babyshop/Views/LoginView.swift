@@ -148,10 +148,10 @@ struct LoginView: View {
                 }
                 Spacer()
             }
-//            .background(
-//                Image("background-transparent")
+            .background(
+                Image("toy-shop-logo-no-background")
 //                    .resizable()
-//            )
+            )
             .onAppear{
                 Task{
                     if system.isLogged{

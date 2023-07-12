@@ -12,6 +12,7 @@ struct ProductView: View {
         self.user = user
         self.product = product
         self.cartProduct = CartProduct(id: product.id, name: product.name, price: product.price, quantity: 0, picture: product.pictures.first!)
+        
         // Customize the appearance of the PageControl
         UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.label
         UIPageControl.appearance().pageIndicatorTintColor = UIColor.separator
@@ -25,7 +26,7 @@ struct ProductView: View {
                 TabView {
                     ForEach(product.pictures, id: \.self) { item in
                          //3
-                        Image(uiImage: item)
+                        Image(uiImage: (item))
                             .resizable()
                             .scaledToFit()
                             .frame(width: proxy.size.width, height: proxy.size.width)

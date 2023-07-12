@@ -14,7 +14,7 @@ class CartProduct: Hashable, ObservableObject, Identifiable{
     }
     
     let cartProductId: String
-    let id: String
+    let id: String //String?
     let name: String
     let price: Float
     @Published var quantity: Int
